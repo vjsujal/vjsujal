@@ -1,38 +1,185 @@
-[![MasterHead](https://user-images.githubusercontent.com/95478989/198955082-6e78ebb5-e1e4-49f9-8d32-6e5af3984dcd.gif)](#)
+<!-- HERO BANNER (CUSTOM HANDCRAFTED SVG) -->
+<div align="center">
+  <img src="./assets/hero.svg" alt="Sujal Vijayvargiya // SDE @ Juspay" width="100%" />
+</div>
 
+<br/>
 
+<!-- SYSTEM TELEMETRY CARDS (CUSTOM SVG HUD) -->
+<div align="center">
+  <img src="./assets/telemetry.svg" alt="Telemetry & Engineering Metrics" width="100%" />
+</div>
 
-<h1 align="center">Hi 👋, I'm Sujal</h1>
-<h3 align="center">A passionate Frontend developer and Data analyst from India</h3>
+<br/>
 
-<p align="left"> <img src="https://komarev.com/ghpvc/?username=vjsujal&label=Profile%20views&color=0e75b6&style=flat" alt="vjsujal" /> </p>
+<!-- LIVE TERMINAL SESSION (CUSTOM SVG) -->
+<div align="center">
+  <img src="./assets/terminal.svg" alt="Sujal Vijayvargiya Terminal Session" width="100%" />
+</div>
 
-<p align="center"> <a href="#"><img src="https://github-profile-trophy.vercel.app/?username=vjsujal" alt="vjsujal" /></a> </p>
+<br/>
 
-- 🌱 I’m currently learning **Supervised Machine Learning**
+<!-- QUICK ACTION BUTTONS -->
+<div align="center">
+  <a href="https://linkedin.com/in/sujalvijayvargiya" target="_blank">
+    <img src="https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" />
+  </a>
+  &nbsp;
+  <a href="mailto:sujalvj121@gmail.com" target="_blank">
+    <img src="https://img.shields.io/badge/Email-Initialize%20Transmission-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" />
+  </a>
+  &nbsp;
+  <a href="https://dsa-interviewer-bot.vercel.app" target="_blank">
+    <img src="https://img.shields.io/badge/AlgoMentor-Test%20Voice%20AI-00C7B7?style=for-the-badge&logo=vercel&logoColor=white" alt="AlgoMentor Live" />
+  </a>
+  &nbsp;
+  <a href="https://github.com/vjsujal" target="_blank">
+    <img src="https://img.shields.io/badge/GitHub-Follow%20@vjsujal-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" />
+  </a>
+</div>
 
-- 👯 I’m looking to collaborate on **ML and Flutter based Projects**
+<br/>
 
-- 🤝 I’m looking for help with **Flutter**
+---
 
-- 💬 Ask me about **HTML/CSS, Python, Flutter.**
+## ⚡ System Architecture & Execution Pipelines
 
-- 📫 How to reach me **www.sujalvj121@gmail.com**
+### 1. Multi-Region Fintech & Payment Orchestration Engine
+> *High-concurrency distributed payment infrastructure engineered at Juspay Technologies, powering enterprise merchant transactions across Singapore, Hong Kong, and India.*
 
-- ⚡ Fun fact **I think I am an Overthinker**
+```mermaid
+flowchart LR
+    subgraph INGRESS ["Ingress & Validation"]
+        REQ["Merchant Checkout Request"] --> IDEM["Idempotency Filter & Tokenizer"]
+    end
 
-<h3 align="left">Connect with me:</h3>
-<p align="left">
-<a href="https://dev.to/@vjsujal" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/devto.svg" alt="@vjsujal" height="30" width="40" /></a>
-<a href="https://linkedin.com/in/https://www.linkedin.com/in/sujal-vijayvargia-6900771b7" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="https://www.linkedin.com/in/sujal-vijayvargia-6900771b7" height="30" width="40" /></a>
-<a href="https://www.hackerrank.com/vjsujal" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/hackerrank.svg" alt="vjsujal" height="30" width="40" /></a>
-</p>
+    subgraph ORCHESTRATOR ["Payment Orchestrator"]
+        IDEM --> STEP1["01 // Authorization"]
+        STEP1 --> STEP2["02 // 3DS Authentication (FPS / WeChat / Alipay)"]
+        STEP2 --> STEP3["03 // Capture & Settlement"]
+    end
 
-<h3 align="left">Languages and Tools:</h3>
-<p align="left"> <a href="https://developer.android.com" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/android/android-original-wordmark.svg" alt="android" width="40" height="40"/> </a> <a href="https://www.cprogramming.com/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/c/c-original.svg" alt="c" width="40" height="40"/> </a> <a href="https://www.w3schools.com/cpp/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/cplusplus/cplusplus-original.svg" alt="cplusplus" width="40" height="40"/> </a> <a href="https://www.w3schools.com/css/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg" alt="css3" width="40" height="40"/> </a> <a href="https://dart.dev" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/dartlang/dartlang-icon.svg" alt="dart" width="40" height="40"/> </a> <a href="https://firebase.google.com/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/firebase/firebase-icon.svg" alt="firebase" width="40" height="40"/> </a> <a href="https://flutter.dev" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/flutterio/flutterio-icon.svg" alt="flutter" width="40" height="40"/> </a> <a href="https://cloud.google.com" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/google_cloud/google_cloud-icon.svg" alt="gcp" width="40" height="40"/> </a> <a href="https://git-scm.com/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg" alt="git" width="40" height="40"/> </a> <a href="https://www.w3.org/html/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg" alt="html5" width="40" height="40"/> </a> <a href="https://www.java.com" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg" alt="java" width="40" height="40"/> </a> <a href="https://www.linux.org/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/linux/linux-original.svg" alt="linux" width="40" height="40"/> </a> <a href="https://www.mysql.com/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original-wordmark.svg" alt="mysql" width="40" height="40"/> </a> <a href="https://pandas.pydata.org/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/2ae2a900d2f041da66e950e4d48052658d850630/icons/pandas/pandas-original.svg" alt="pandas" width="40" height="40"/> </a> <a href="https://www.photoshop.com/en" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/photoshop/photoshop-line.svg" alt="photoshop" width="40" height="40"/> </a> <a href="https://www.python.org" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" alt="python" width="40" height="40"/> </a> <a href="https://scikit-learn.org/" target="_blank" rel="noreferrer"> <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Scikit_learn_logo_small.svg" alt="scikit_learn" width="40" height="40"/> </a> <a href="https://seaborn.pydata.org/" target="_blank" rel="noreferrer"> <img src="https://seaborn.pydata.org/_images/logo-mark-lightbg.svg" alt="seaborn" width="40" height="40"/> </a> </p>
+    subgraph MESH ["Multi-Region Mesh"]
+        STEP1 -.-> SG["🇸🇬 Singapore Stack (Euler / Morpheus)"]
+        STEP2 -.-> HK["🇭🇰 Hong Kong Stack (PaymentPage)"]
+    end
 
-<p><img align="left" src="https://github-readme-stats.vercel.app/api/top-langs?username=vjsujal&show_icons=true&locale=en&layout=compact" alt="vjsujal" /></p>
+    subgraph FABRIC ["Event & Audit Fabric"]
+        STEP3 --> KAFKA["Apache Kafka Event Bus"]
+        KAFKA --> RECON["Automated Ledger & Reconciliation (PostgreSQL)"]
+    end
 
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img align="center" height="165" src="https://github-readme-stats.vercel.app/api?username=vjsujal&show_icons=true&locale=en" alt="vjsujal" /></p>
+    classDef primary fill:#0b1329,stroke:#38bdf8,stroke-width:1.5px,color:#f8fafc;
+    classDef accent fill:#0f172a,stroke:#818cf8,stroke-width:1.5px,color:#f8fafc;
+    classDef success fill:#064e3b,stroke:#34d399,stroke-width:1.5px,color:#f8fafc;
+    class REQ,IDEM primary;
+    class STEP1,STEP2,STEP3 accent;
+    class SG,HK,KAFKA,RECON success;
+```
 
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img align="center" height="165" src="https://github-readme-streak-stats.herokuapp.com/?user=vjsujal&" alt="vjsujal" /></p>
+---
+
+### 2. Neural Audio & Adaptive Evaluation Pipeline (`AlgoMentor`)
+> *Real-time FAANG-style DSA mock interview platform orchestrating speech streaming, LLM question synthesis, and automated scoring.*
+
+```mermaid
+sequenceDiagram
+    autonumber
+    actor Candidate as 🧑‍💻 Candidate
+    participant UI as 🖥️ Next.js Client
+    participant API as ⚡ FastAPI Gateway
+    participant STT as 🎙️ AssemblyAI / Whisper
+    participant LLM as 🧠 Groq (Llama-3.3-70B)
+    participant TTS as 🔊 AWS Polly Neural
+
+    Candidate->>UI: Speaks DSA solution / code walk-through
+    UI->>API: WebRTC / Audio Stream Chunking
+    API->>STT: Low-latency Audio Transcription
+    STT-->>API: Synthesized Transcript Stream
+    API->>LLM: Contextual Prompt (Code, Complexity, Communication)
+    LLM-->>API: Adaptive Feedback + Dynamic Follow-up Question
+    API->>TTS: Neural Voice Synthesis Stream
+    TTS-->>UI: Real-Time Audio Feedback Stream
+    UI-->>Candidate: Realistic Conversational Voice Playback
+```
+
+---
+
+## 📋 Production Audit & Impact Ledger
+
+An audited log of production initiatives, scale breakthroughs, and open-source systems:
+
+| Ledger ID | System / Domain | Operation & Focus | Status | Impact & Guarantees |
+|:---:|---|---|:---:|---|
+| `#JUS-SG01` | **Singapore Regional Stack** | Automated blueprint infrastructure codification | `🟢 PRODUCTION` | Slashed new market rollout from **6 weeks ➔ 15 days (-75%)** |
+| `#JUS-WL02` | **Native Wallet SDKs** | Shipped WeChatPay, Alipay & FPS intent checkout | `🟢 PRODUCTION` | Seamless native Android/iOS wallet payments across SG & HK |
+| `#JUS-OR03` | **3-Step Orchestration** | Decoupled Authorization, 3DS Authentication & Capture | `🟢 PRODUCTION` | Modular state machine lifecycle with 100% idempotency |
+| `#DEV-AM04` | **AlgoMentor** | Real-time AI mock interview platform with neural voice | `🚀 LIVE SYSTEM` | Sub-second voice synthesis & adaptive evaluation (`Groq` + `AWS`) |
+| `#DEV-MM05` | **Meeting Intelligence** | Automated audio transcription & action item extraction | `🚀 LIVE SYSTEM` | End-to-end meeting summaries using `Gemini API` & `FastAPI` |
+
+---
+
+## 🛠️ Engineering Loadout & System Capabilities
+
+```
+┌─────────────────────────┬──────────────────────────────────────────────────────────────────┐
+│ DOMAIN                  │ TECHNOLOGIES & TOOLING RUNTIMES                                  │
+├─────────────────────────┼──────────────────────────────────────────────────────────────────┤
+│ ⚡ Payment & Core        │ Haskell (Pure FP) • Python 3.12 • TypeScript • C/C++ • SQL       │
+│ 🛰️ Distributed Fabric   │ Apache Kafka • Redis (Distributed Caching & Limiters) • Postgres │
+│ 🌐 Backend & Services   │ FastAPI (Async APIs) • Node.js • Microservices • Webhooks • REST │
+│ 🧠 AI & Speech Systems  │ Groq (Llama-3.3-70B) • Gemini API • AWS Polly • AssemblyAI       │
+│ 🖥️ Interface & Mobile   │ Next.js (App Router) • React 19 • Tailwind CSS • Flutter / Dart  │
+│ 🛡️ DevOps & Infra       │ Docker • Kubernetes • Linux Server Administration • Git • Actions│
+└─────────────────────────┴──────────────────────────────────────────────────────────────────┘
+```
+
+<div align="center">
+  <a href="#">
+    <img src="https://skillicons.dev/icons?i=py,ts,js,haskell,cpp,postgres,redis,kafka,docker,kubernetes,fastapi,nodejs,nextjs,react,tailwind,git,linux,postman,aws,gcp" alt="Tech Stack Icons" />
+  </a>
+</div>
+
+---
+
+## 📊 Telemetry, Activity & Contribution Stream
+
+<div align="center">
+  <table border="0" cellspacing="0" cellpadding="0">
+    <tr align="center">
+      <td>
+        <img width="420" src="https://github-stats-extended.vercel.app/api?username=vjsujal&show_icons=true&theme=tokyo-night&border_radius=10&rank_icon=github" alt="Sujal's GitHub Stats" />
+      </td>
+      <td>
+        <img width="420" src="https://github-stats-extended.vercel.app/api/top-langs?username=vjsujal&layout=compact&theme=tokyo-night&border_radius=10" alt="Top Languages" />
+      </td>
+    </tr>
+    <tr align="center">
+      <td colspan="2">
+        <br/>
+        <img width="850" src="https://streak-stats.demolab.com/?user=vjsujal&theme=tokyo-night&border_radius=10" alt="GitHub Streak" />
+      </td>
+    </tr>
+  </table>
+</div>
+
+---
+
+## 📡 Dispatch & Communication Protocols
+
+```bash
+$ ping -c 1 sujalvijayvargiya
+PING sujal (12.9716° N, 77.5946° E [Bangalore, IN]): 56 data bytes
+64 bytes from juspay-hq: icmp_seq=0 ttl=64 time=0.042 ms
+
+--- Communication Channels Available ---
+├── LinkedIn:  https://linkedin.com/in/sujalvijayvargiya
+├── Email:     sujalvj121@gmail.com
+├── Live App:  https://dsa-interviewer-bot.vercel.app
+└── GitHub:    https://github.com/vjsujal
+```
+
+<div align="center">
+  <sub>⚡ Engineered with precision &amp; architectural resilience by <b>Sujal Vijayvargiya</b></sub><br/>
+  <sub><i>"Simplicity is prerequisite for reliability." — Edsger W. Dijkstra</i></sub>
+</div>
