@@ -42,11 +42,11 @@
 
 ---
 
-## 🧑‍💻 About Me
+## 🧑‍💻 Bio
 
-I am a Software Development Engineer at **[Juspay Technologies](https://juspay.in)** based in Bangalore, India. By day, I work on high-scale payment infrastructure, distributed architectures, and low-latency backend systems.
-
-In my personal time, I architect and build at the intersection of **Generative AI, speech intelligence, and developer tooling**—crafting voice-interactive systems and intelligent automation pipelines.
+> **SDE @ [Juspay](https://juspay.in)** building high-scale payment infrastructure and distributed state machines.  
+> After hours, I architect **voice-interactive AI platforms and intelligent developer tools** (built [AlgoMentor](https://dsa-interviewer-bot.vercel.app)).  
+> *Turning caffeine into idempotent distributed systems & clean abstractions.* ☕⚡
 
 ---
 
