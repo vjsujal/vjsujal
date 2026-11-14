@@ -1,13 +1,13 @@
 <!-- HERO BANNER (REFINED DARK LUXURY SVG) -->
 <div align="center">
-  <img src="./assets/hero.svg" alt="Sujal Vijayvargiya // SDE @ Juspay" width="100%" />
+  <img src="./assets/hero.svg" alt="Sujal Vijayvargiya // Software Development Engineer" width="100%" />
 </div>
 
 <br/>
 
-<!-- SYSTEM TELEMETRY CARDS (METRIC MODULES) -->
+<!-- SYSTEM TELEMETRY CARDS (PERSONAL PROJECTS HUD) -->
 <div align="center">
-  <img src="./assets/telemetry.svg" alt="Telemetry & Engineering Metrics" width="100%" />
+  <img src="./assets/telemetry.svg" alt="Personal Projects & Engineering Telemetry" width="100%" />
 </div>
 
 <br/>
@@ -42,45 +42,47 @@
 
 ---
 
-## ⚡ System Architecture & Execution Pipelines
+## 🧑‍💻 About Me
 
-### 1. Multi-Region Fintech & Payment Orchestration Engine
-> *High-concurrency distributed payment infrastructure engineered at Juspay Technologies, powering enterprise merchant transactions across Singapore, Hong Kong, and India.*
+I am a Software Development Engineer at **[Juspay Technologies](https://juspay.in)** based in Bangalore, India. By day, I work on high-scale payment infrastructure, distributed architectures, and low-latency backend systems.
 
-```mermaid
-flowchart LR
-    subgraph INGRESS ["Ingress & Validation"]
-        REQ["Merchant Checkout Request"] --> IDEM["Idempotency Filter & Tokenizer"]
-    end
-
-    subgraph ORCHESTRATOR ["Payment Orchestrator"]
-        IDEM --> STEP1["01 // Authorization"]
-        STEP1 --> STEP2["02 // 3DS Authentication (FPS / WeChat / Alipay)"]
-        STEP2 --> STEP3["03 // Capture & Settlement"]
-    end
-
-    subgraph MESH ["Multi-Region Mesh"]
-        STEP1 -.-> SG["🇸🇬 Singapore Stack (Euler / Morpheus)"]
-        STEP2 -.-> HK["🇭🇰 Hong Kong Stack (PaymentPage)"]
-    end
-
-    subgraph FABRIC ["Event & Audit Fabric"]
-        STEP3 --> KAFKA["Apache Kafka Event Bus"]
-        KAFKA --> RECON["Automated Ledger & Reconciliation (PostgreSQL)"]
-    end
-
-    classDef primary fill:#0b1329,stroke:#3b82f6,stroke-width:1.5px,color:#f8fafc;
-    classDef accent fill:#0f172a,stroke:#6366f1,stroke-width:1.5px,color:#f8fafc;
-    classDef success fill:#064e3b,stroke:#10b981,stroke-width:1.5px,color:#f8fafc;
-    class REQ,IDEM primary;
-    class STEP1,STEP2,STEP3 accent;
-    class SG,HK,KAFKA,RECON success;
-```
+In my personal time, I architect and build at the intersection of **Generative AI, speech intelligence, and developer tooling**—crafting voice-interactive systems and intelligent automation pipelines.
 
 ---
 
-### 2. Neural Audio & Adaptive Evaluation Pipeline (`AlgoMentor`)
-> *Real-time FAANG-style DSA mock interview platform orchestrating speech streaming, LLM question synthesis, and automated scoring.*
+## 🚀 Featured Personal Projects
+
+### `01` [AlgoMentor](https://dsa-interviewer-bot.vercel.app) — AI Mock Interview Platform
+> Real-time voice-interactive platform simulating FAANG-style algorithmic interviews with adaptive questioning and automated evaluation.
+
+* **Adaptive AI Reasoning:** Leverages Groq Llama-3.3-70B for low-latency contextual evaluation, assessing code structure, time/space complexity, and communication clarity.
+* **Neural Voice Synthesis:** Integrated AWS Polly for low-latency, natural interviewer voice playback with conversational speech pacing.
+* **Stack:** `Next.js` `FastAPI` `Python` `Groq (Llama-3.3-70B)` `AWS Polly` `PostgreSQL` `JWT Auth`
+* **Links:** [Live Platform ↗](https://dsa-interviewer-bot.vercel.app) &nbsp;|&nbsp; [GitHub Repository ↗](https://github.com/vjsujal)
+
+---
+
+### `02` AI Minutes of Meeting (MoM) Generator
+> End-to-end meeting intelligence pipeline transcribing audio and synthesizing structured, actionable minutes.
+
+* **Audio Intelligence:** Automated speech-to-text pipeline using AssemblyAI to handle multi-speaker meeting recordings.
+* **Structured Synthesis:** Uses Google's Gemini API with structured outputs to extract core decisions, key takeaways, and assignable action items.
+* **Stack:** `FastAPI` `React.js` `Gemini API` `AssemblyAI` `Python` `JWT Auth`
+* **Links:** [GitHub Repository ↗](https://github.com/vjsujal)
+
+---
+
+### `03` LongToShorts — Automated Video Intelligence
+> AI-powered pipeline extracting concise, high-engagement short-form videos from long-form content.
+
+* **NLP Hook Extraction:** Analyzes audio transcripts with spaCy and Google Generative AI to identify high-retention moments and viral narrative hooks.
+* **Automated Video Processing:** Programmatically cuts, frames, and renders vertical video clips ready for YouTube Shorts and Reels using MoviePy.
+* **Stack:** `Python` `Google GenAI` `MoviePy` `spaCy` `AssemblyAI`
+* **Links:** [GitHub Repository ↗](https://github.com/vjsujal)
+
+---
+
+## ⚡ Architecture: AlgoMentor Voice & Evaluation Pipeline
 
 ```mermaid
 sequenceDiagram
@@ -88,34 +90,20 @@ sequenceDiagram
     actor Candidate as 🧑‍💻 Candidate
     participant UI as 🖥️ Next.js Client
     participant API as ⚡ FastAPI Gateway
-    participant STT as 🎙️ AssemblyAI / Whisper
-    participant LLM as 🧠 Groq (Llama-3.3-70B)
-    participant TTS as 🔊 AWS Polly Neural
+    participant STT as 🎙️ Speech Ingestion (AssemblyAI)
+    participant LLM as 🧠 Groq (Llama-3.3-70B Core)
+    participant TTS as 🔊 AWS Polly Neural Voice
 
-    Candidate->>UI: Speaks DSA solution / code walk-through
-    UI->>API: WebRTC / Audio Stream Chunking
-    API->>STT: Low-latency Audio Transcription
-    STT-->>API: Synthesized Transcript Stream
-    API->>LLM: Contextual Prompt (Code, Complexity, Communication)
-    LLM-->>API: Adaptive Feedback + Dynamic Follow-up Question
-    API->>TTS: Neural Voice Synthesis Stream
+    Candidate->>UI: Speaks code explanation / complexity walk-through
+    UI->>API: Audio Chunk Stream
+    API->>STT: Low-Latency Speech-to-Text
+    STT-->>API: Transcribed Candidate Response
+    API->>LLM: Evaluate Code + Formulate Follow-Up Question
+    LLM-->>API: Contextual Feedback & Next Question
+    API->>TTS: Stream Text to Neural Speech Synthesis
     TTS-->>UI: Real-Time Audio Feedback Stream
     UI-->>Candidate: Realistic Conversational Voice Playback
 ```
-
----
-
-## 📋 Production Audit & Impact Ledger
-
-An audited log of production initiatives, scale breakthroughs, and open-source systems:
-
-| Ledger ID | System / Domain | Operation & Focus | Status | Impact & Guarantees |
-|:---:|---|---|:---:|---|
-| `#JUS-SG01` | **Singapore Regional Stack** | Automated blueprint infrastructure codification | `🟢 PRODUCTION` | Slashed new market rollout from **6 weeks ➔ 15 days (-75%)** |
-| `#JUS-WL02` | **Native Wallet SDKs** | Shipped WeChatPay, Alipay & FPS intent checkout | `🟢 PRODUCTION` | Seamless native Android/iOS wallet payments across SG & HK |
-| `#JUS-OR03` | **3-Step Orchestration** | Decoupled Authorization, 3DS Authentication & Capture | `🟢 PRODUCTION` | Modular state machine lifecycle with 100% idempotency |
-| `#DEV-AM04` | **AlgoMentor** | Real-time AI mock interview platform with neural voice | `🚀 LIVE SYSTEM` | Sub-second voice synthesis & adaptive evaluation (`Groq` + `AWS`) |
-| `#DEV-MM05` | **Meeting Intelligence** | Automated audio transcription & action item extraction | `🚀 LIVE SYSTEM` | End-to-end meeting summaries using `Gemini API` & `FastAPI` |
 
 ---
 
@@ -125,12 +113,12 @@ An audited log of production initiatives, scale breakthroughs, and open-source s
 ┌─────────────────────────┬──────────────────────────────────────────────────────────────────┐
 │ DOMAIN                  │ TECHNOLOGIES & TOOLING RUNTIMES                                  │
 ├─────────────────────────┼──────────────────────────────────────────────────────────────────┤
-│ ⚡ Payment & Core        │ Haskell (Pure FP) • Python 3.12 • TypeScript • C/C++ • SQL       │
-│ 🛰️ Distributed Fabric   │ Apache Kafka • Redis (Distributed Caching & Limiters) • Postgres │
-│ 🌐 Backend & Services   │ FastAPI (Async APIs) • Node.js • Microservices • Webhooks • REST │
+│ ⚡ Core Languages        │ Python 3.12 • TypeScript • JavaScript • Haskell • C/C++ • SQL    │
+│ 🛰️ Distributed Systems  │ Apache Kafka • Redis (Caching & Rate Limiting) • PostgreSQL ACID │
+│ 🌐 Backend Services     │ FastAPI (Async APIs) • Node.js • Express • Microservices • REST  │
 │ 🧠 AI & Speech Systems  │ Groq (Llama-3.3-70B) • Gemini API • AWS Polly • AssemblyAI       │
-│ 🖥️ Interface & Mobile   │ Next.js (App Router) • React 19 • Tailwind CSS • Flutter / Dart  │
-│ 🛡️ DevOps & Infra       │ Docker • Kubernetes • Linux Server Administration • Git • Actions│
+│ 🖥️ Frontend & UI        │ Next.js (App Router) • React 19 • Tailwind CSS • Flutter / Dart  │
+│ 🛡️ DevOps & Cloud       │ Docker • Kubernetes • Linux Administration • Git • GitHub Actions│
 └─────────────────────────┴──────────────────────────────────────────────────────────────────┘
 ```
 
@@ -142,7 +130,7 @@ An audited log of production initiatives, scale breakthroughs, and open-source s
 
 ---
 
-## 📊 Telemetry, Activity & Contribution Stream
+## 📊 Activity & Contribution Stream
 
 <div align="center">
   <table border="0" cellspacing="0" cellpadding="0">
@@ -169,8 +157,8 @@ An audited log of production initiatives, scale breakthroughs, and open-source s
 
 ```bash
 $ ping -c 1 sujalvijayvargiya
-PING sujal (12.9716° N, 77.5946° E [Bangalore, IN]): 56 data bytes
-64 bytes from juspay-hq: icmp_seq=0 ttl=64 time=0.042 ms
+PING sujal (Bangalore, IN): 56 data bytes
+64 bytes from local-station: icmp_seq=0 ttl=64 time=0.042 ms
 
 --- Communication Channels Available ---
 ├── LinkedIn:  https://linkedin.com/in/sujalvijayvargiya

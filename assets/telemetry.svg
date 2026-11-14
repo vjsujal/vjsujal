@@ -40,60 +40,60 @@
   <!-- Outer Canvas Base -->
   <rect width="900" height="170" rx="14" fill="#060911" />
 
-  <!-- CARD 1: Regional Blueprint -->
+  <!-- CARD 1: AlgoMentor -->
   <g transform="translate(10, 10)">
     <rect width="280" height="150" rx="10" fill="url(#cardSurface)" stroke="#1e293b" stroke-width="1.2" />
     <rect width="280" height="150" rx="10" fill="url(#cardGridPattern)" />
     
     <!-- Top Pill -->
     <circle cx="20" cy="22" r="3.5" fill="#38bdf8" class="led" filter="url(#softGlow)" />
-    <text x="32" y="26" fill="#64748b" class="mono" font-size="10" font-weight="600" letter-spacing="1">MULTI-REGION BLUEPRINT</text>
+    <text x="32" y="26" fill="#64748b" class="mono" font-size="10" font-weight="600" letter-spacing="1">PROJECT // ALGOMENTOR</text>
     
     <!-- Main Metric -->
-    <text x="20" y="66" fill="url(#metricWhite)" class="mono" font-size="28" font-weight="700">45d ➔ 15d</text>
-    <text x="20" y="88" fill="#94a3b8" class="sans" font-size="12" font-weight="500">-67% Regional Deployment Time</text>
+    <text x="20" y="66" fill="url(#metricWhite)" class="mono" font-size="26" font-weight="700">VOICE + EVAL</text>
+    <text x="20" y="88" fill="#94a3b8" class="sans" font-size="12" font-weight="500">FAANG-Style AI Mock Interviews</text>
     
     <!-- Stack Divider & Details -->
     <line x1="20" y1="106" x2="260" y2="106" stroke="#1e293b" stroke-width="1" />
-    <text x="20" y="128" fill="#93c5fd" class="mono" font-size="10.5">SG &amp; HK STACKS // HASKELL</text>
-    <text x="20" y="142" fill="#475569" class="mono" font-size="9.5">Euler • PaymentPage • Recon</text>
+    <text x="20" y="128" fill="#93c5fd" class="mono" font-size="10.5">GROQ LLAMA-3.3 // AWS POLLY</text>
+    <text x="20" y="142" fill="#475569" class="mono" font-size="9.5">Next.js • FastAPI • Real-Time Voice</text>
   </g>
 
-  <!-- CARD 2: Payment Orchestration -->
+  <!-- CARD 2: AI Minutes of Meeting -->
   <g transform="translate(310, 10)">
     <rect width="280" height="150" rx="10" fill="url(#cardSurface)" stroke="#1e293b" stroke-width="1.2" />
     <rect width="280" height="150" rx="10" fill="url(#cardGridPattern)" />
     
     <!-- Top Pill -->
     <circle cx="20" cy="22" r="3.5" fill="#10b981" class="led" filter="url(#softGlow)" />
-    <text x="32" y="26" fill="#64748b" class="mono" font-size="10" font-weight="600" letter-spacing="1">PAYMENT ORCHESTRATION</text>
+    <text x="32" y="26" fill="#64748b" class="mono" font-size="10" font-weight="600" letter-spacing="1">PROJECT // MEETING INTEL</text>
     
     <!-- Main Metric -->
-    <text x="20" y="66" fill="url(#metricWhite)" class="mono" font-size="26" font-weight="700">3-STEP LIFECYCLE</text>
-    <text x="20" y="88" fill="#94a3b8" class="sans" font-size="12" font-weight="500">Auth ➔ 3DS ➔ Capture</text>
+    <text x="20" y="66" fill="url(#metricWhite)" class="mono" font-size="26" font-weight="700">INTELLIGENT MoM</text>
+    <text x="20" y="88" fill="#94a3b8" class="sans" font-size="12" font-weight="500">Speech-to-Text &amp; Structured Summaries</text>
     
     <!-- Stack Divider & Details -->
     <line x1="20" y1="106" x2="260" y2="106" stroke="#1e293b" stroke-width="1" />
-    <text x="20" y="128" fill="#86efac" class="mono" font-size="10.5">STATE MACHINES // WECHATPAY</text>
-    <text x="20" y="142" fill="#475569" class="mono" font-size="9.5">Alipay • FPS Native Wallet SDKs</text>
+    <text x="20" y="128" fill="#86efac" class="mono" font-size="10.5">GEMINI API // ASSEMBLYAI</text>
+    <text x="20" y="142" fill="#475569" class="mono" font-size="9.5">FastAPI • React.js • JWT Auth</text>
   </g>
 
-  <!-- CARD 3: AlgoMentor AI Engine -->
+  <!-- CARD 3: LongToShorts -->
   <g transform="translate(610, 10)">
     <rect width="280" height="150" rx="10" fill="url(#cardSurface)" stroke="#1e293b" stroke-width="1.2" />
     <rect width="280" height="150" rx="10" fill="url(#cardGridPattern)" />
     
     <!-- Top Pill -->
     <circle cx="20" cy="22" r="3.5" fill="#818cf8" class="led" filter="url(#softGlow)" />
-    <text x="32" y="26" fill="#64748b" class="mono" font-size="10" font-weight="600" letter-spacing="1">AI INTERVIEW ENGINE</text>
+    <text x="32" y="26" fill="#64748b" class="mono" font-size="10" font-weight="600" letter-spacing="1">PROJECT // LONG TO SHORTS</text>
     
     <!-- Main Metric -->
-    <text x="20" y="66" fill="url(#metricWhite)" class="mono" font-size="26" font-weight="700">VOICE + ADAPTIVE</text>
-    <text x="20" y="88" fill="#94a3b8" class="sans" font-size="12" font-weight="500">Real-Time FAANG DSA Simulation</text>
+    <text x="20" y="66" fill="url(#metricWhite)" class="mono" font-size="26" font-weight="700">VIDEO PIPELINE</text>
+    <text x="20" y="88" fill="#94a3b8" class="sans" font-size="12" font-weight="500">Automated Shorts Extractor with GenAI</text>
     
     <!-- Stack Divider & Details -->
     <line x1="20" y1="106" x2="260" y2="106" stroke="#1e293b" stroke-width="1" />
-    <text x="20" y="128" fill="#c7d2fe" class="mono" font-size="10.5">GROQ LLAMA-3.3 // AWS POLLY</text>
-    <text x="20" y="142" fill="#475569" class="mono" font-size="9.5">Next.js • FastAPI • Speech AI</text>
+    <text x="20" y="128" fill="#c7d2fe" class="mono" font-size="10.5">GOOGLE GENAI // MOVIEPY</text>
+    <text x="20" y="142" fill="#475569" class="mono" font-size="9.5">Python • NLP • Video Processing</text>
   </g>
 </svg>
