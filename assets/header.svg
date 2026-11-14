@@ -1,0 +1,104 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 240" width="100%" height="100%">
+  <defs>
+    <!-- Subtle linear border gradient -->
+    <linearGradient id="borderFade" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#2a2a28" />
+      <stop offset="50%" stop-color="#3d3d3a" />
+      <stop offset="100%" stop-color="#2a2a28" />
+    </linearGradient>
+
+    <!-- Subtle radial glow behind initials -->
+    <radialGradient id="softGlow" cx="12%" cy="50%" r="40%">
+      <stop offset="0%" stop-color="#262624" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#0c0c0c" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+
+  <style>
+    .font-sans {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    }
+    .font-mono {
+      font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
+    }
+    @keyframes pulseSoft {
+      0%, 100% { opacity: 0.9; transform: scale(1); }
+      50% { opacity: 0.4; transform: scale(0.9); }
+    }
+    .pulse-dot {
+      animation: pulseSoft 3s ease-in-out infinite;
+      transform-origin: center;
+    }
+  </style>
+
+  <!-- Background Base -->
+  <rect width="900" height="240" rx="8" fill="#0c0c0c" stroke="url(#borderFade)" stroke-width="1" />
+  <rect width="900" height="240" rx="8" fill="url(#softGlow)" />
+
+  <!-- Top Metadata Bar -->
+  <g transform="translate(36, 36)">
+    <!-- Monogram / Initials in Dot Matrix Style -->
+    <g transform="translate(0, -6)">
+      <!-- S -->
+      <rect x="0" y="0" width="3" height="3" rx="0.6" fill="#a1a19d" />
+      <rect x="4" y="0" width="3" height="3" rx="0.6" fill="#a1a19d" />
+      <rect x="8" y="0" width="3" height="3" rx="0.6" fill="#a1a19d" />
+      <rect x="0" y="4" width="3" height="3" rx="0.6" fill="#a1a19d" />
+      <rect x="0" y="8" width="3" height="3" rx="0.6" fill="#a1a19d" />
+      <rect x="4" y="8" width="3" height="3" rx="0.6" fill="#a1a19d" />
+      <rect x="8" y="8" width="3" height="3" rx="0.6" fill="#a1a19d" />
+      <rect x="8" y="12" width="3" height="3" rx="0.6" fill="#a1a19d" />
+      <rect x="8" y="16" width="3" height="3" rx="0.6" fill="#a1a19d" />
+      <rect x="4" y="16" width="3" height="3" rx="0.6" fill="#a1a19d" />
+      <rect x="0" y="16" width="3" height="3" rx="0.6" fill="#a1a19d" />
+
+      <!-- V -->
+      <rect x="16" y="0" width="3" height="3" rx="0.6" fill="#a1a19d" />
+      <rect x="24" y="0" width="3" height="3" rx="0.6" fill="#a1a19d" />
+      <rect x="16" y="4" width="3" height="3" rx="0.6" fill="#a1a19d" />
+      <rect x="24" y="4" width="3" height="3" rx="0.6" fill="#a1a19d" />
+      <rect x="16" y="8" width="3" height="3" rx="0.6" fill="#a1a19d" />
+      <rect x="24" y="8" width="3" height="3" rx="0.6" fill="#a1a19d" />
+      <rect x="18" y="12" width="3" height="3" rx="0.6" fill="#a1a19d" />
+      <rect x="22" y="12" width="3" height="3" rx="0.6" fill="#a1a19d" />
+      <rect x="20" y="16" width="3" height="3" rx="0.6" fill="#a1a19d" />
+    </g>
+
+    <!-- Context Location -->
+    <text x="42" y="9" fill="#858582" class="font-mono" font-size="11.5" letter-spacing="0.5">
+      BANGALORE, IN <tspan fill="#444442">//</tspan> 12.97° N, 77.59° E
+    </text>
+
+    <!-- Status indicator (Right-aligned) -->
+    <g transform="translate(710, -2)">
+      <circle cx="0" cy="9" r="3.5" fill="#10b981" class="pulse-dot" />
+      <text x="12" y="12" fill="#a1a19d" class="font-mono" font-size="11" letter-spacing="0.8">
+        SDE @ JUSPAY
+      </text>
+    </g>
+  </g>
+
+  <!-- Main Headline Typography -->
+  <g transform="translate(36, 112)">
+    <text x="0" y="0" fill="#eeeeeb" class="font-sans" font-size="38" font-weight="600" letter-spacing="-0.8">
+      Sujal Vijayvargiya
+    </text>
+    <text x="0" y="30" fill="#a1a19d" class="font-sans" font-size="15.5" font-weight="400">
+      Software engineer building high-scale payment infrastructure &amp; intelligent developer tools.
+    </text>
+  </g>
+
+  <!-- Hairline divider -->
+  <line x1="36" y1="178" x2="864" y2="178" stroke="#1f1f1d" stroke-width="1" />
+
+  <!-- Bottom Spec Bar -->
+  <g transform="translate(36, 208)">
+    <text x="0" y="0" fill="#666663" class="font-mono" font-size="11" letter-spacing="0.5">
+      CORE <tspan fill="#858582">Haskell • Python • TypeScript • Kafka • PostgreSQL</tspan>
+    </text>
+
+    <text x="828" y="0" text-anchor="end" fill="#666663" class="font-mono" font-size="11" letter-spacing="0.5">
+      DOMAIN <tspan fill="#858582">Distributed Payments &amp; AI Systems</tspan>
+    </text>
+  </g>
+</svg>

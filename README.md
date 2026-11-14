@@ -1,185 +1,93 @@
-<!-- HERO BANNER (CUSTOM HANDCRAFTED SVG) -->
 <div align="center">
-  <img src="./assets/hero.svg" alt="Sujal Vijayvargiya // SDE @ Juspay" width="100%" />
+  <img src="./assets/header.svg" alt="Sujal Vijayvargiya — Software Development Engineer" width="100%" />
 </div>
+
+<p align="center">
+  <a href="https://linkedin.com/in/sujalvijayvargiya">LinkedIn</a> &nbsp;•&nbsp;
+  <a href="mailto:sujalvj121@gmail.com">Email</a> &nbsp;•&nbsp;
+  <a href="https://dsa-interviewer-bot.vercel.app">AlgoMentor (Live)</a> &nbsp;•&nbsp;
+  <a href="https://github.com/vjsujal">GitHub</a>
+</p>
 
 <br/>
 
-<!-- SYSTEM TELEMETRY CARDS (CUSTOM SVG HUD) -->
-<div align="center">
-  <img src="./assets/telemetry.svg" alt="Telemetry & Engineering Metrics" width="100%" />
-</div>
+### About
 
-<br/>
+I am a Software Development Engineer at **[Juspay Technologies](https://juspay.in)** in Bangalore, working on high-scale payment infrastructure, multi-region platform automation, and resilient transaction orchestration across global markets.
 
-<!-- LIVE TERMINAL SESSION (CUSTOM SVG) -->
-<div align="center">
-  <img src="./assets/terminal.svg" alt="Sujal Vijayvargiya Terminal Session" width="100%" />
-</div>
-
-<br/>
-
-<!-- QUICK ACTION BUTTONS -->
-<div align="center">
-  <a href="https://linkedin.com/in/sujalvijayvargiya" target="_blank">
-    <img src="https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" />
-  </a>
-  &nbsp;
-  <a href="mailto:sujalvj121@gmail.com" target="_blank">
-    <img src="https://img.shields.io/badge/Email-Initialize%20Transmission-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" />
-  </a>
-  &nbsp;
-  <a href="https://dsa-interviewer-bot.vercel.app" target="_blank">
-    <img src="https://img.shields.io/badge/AlgoMentor-Test%20Voice%20AI-00C7B7?style=for-the-badge&logo=vercel&logoColor=white" alt="AlgoMentor Live" />
-  </a>
-  &nbsp;
-  <a href="https://github.com/vjsujal" target="_blank">
-    <img src="https://img.shields.io/badge/GitHub-Follow%20@vjsujal-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" />
-  </a>
-</div>
-
-<br/>
+Outside of fintech systems, I explore applied AI—particularly low-latency voice synthesis, conversational agents, and developer tooling.
 
 ---
 
-## ⚡ System Architecture & Execution Pipelines
+### What I Build
 
-### 1. Multi-Region Fintech & Payment Orchestration Engine
-> *High-concurrency distributed payment infrastructure engineered at Juspay Technologies, powering enterprise merchant transactions across Singapore, Hong Kong, and India.*
+#### `01` Payment Infrastructure & Regional Stacks
+> Production systems powering critical transaction flows across Southeast Asia and India.
+
+* **Singapore Stack Blueprint Automation:** Codified infrastructure topology into reusable provisioning blueprints, reducing new-region setup time from 6 weeks to 15 days across 5 core services (*Euler, PaymentPage, Recon, Dashboard, Morpheus*).
+* **3-Step Payment Orchestration:** Built a decoupled transaction lifecycle framework separating Authorization, 3DS Authentication, and Capture to give enterprise merchants flexible routing and state management.
+* **Native Wallet Integrations:** Shipped native SDK checkout flows for WeChatPay, Alipay, and FPS across Android and iOS in Singapore and Hong Kong markets.
+* **Tech:** `Haskell` `Apache Kafka` `PostgreSQL` `Docker` `Microservices`
+
+#### `02` AlgoMentor — AI Mock Interview Platform
+> Real-time voice-interactive platform simulating FAANG-style algorithmic interviews.
+
+* Generates adaptive DSA problems and contextual follow-up questions tailored to candidate code structure and reasoning.
+* Integrates sub-second speech-to-text with neural text-to-speech for realistic conversational pacing.
+* **Tech:** `Next.js` `FastAPI` `Python` `Groq (Llama-3.3-70B)` `AWS Polly` `PostgreSQL`
+* **Links:** [Live Platform](https://dsa-interviewer-bot.vercel.app) &nbsp;|&nbsp; [Repository](https://github.com/vjsujal)
+
+#### `03` Meeting Intelligence Pipeline
+> Automated transcription, key decision extraction, and structured minutes generation.
+
+* End-to-end pipeline processing multi-speaker audio recordings into structured, actionable minutes of meeting with action item assignment.
+* **Tech:** `FastAPI` `React` `Gemini API` `AssemblyAI` `JWT`
+
+---
+
+### Architecture: Payment Orchestration Lifecycle
 
 ```mermaid
 flowchart LR
-    subgraph INGRESS ["Ingress & Validation"]
-        REQ["Merchant Checkout Request"] --> IDEM["Idempotency Filter & Tokenizer"]
-    end
-
-    subgraph ORCHESTRATOR ["Payment Orchestrator"]
-        IDEM --> STEP1["01 // Authorization"]
-        STEP1 --> STEP2["02 // 3DS Authentication (FPS / WeChat / Alipay)"]
-        STEP2 --> STEP3["03 // Capture & Settlement"]
-    end
-
-    subgraph MESH ["Multi-Region Mesh"]
-        STEP1 -.-> SG["🇸🇬 Singapore Stack (Euler / Morpheus)"]
-        STEP2 -.-> HK["🇭🇰 Hong Kong Stack (PaymentPage)"]
-    end
-
-    subgraph FABRIC ["Event & Audit Fabric"]
-        STEP3 --> KAFKA["Apache Kafka Event Bus"]
-        KAFKA --> RECON["Automated Ledger & Reconciliation (PostgreSQL)"]
-    end
-
-    classDef primary fill:#0b1329,stroke:#38bdf8,stroke-width:1.5px,color:#f8fafc;
-    classDef accent fill:#0f172a,stroke:#818cf8,stroke-width:1.5px,color:#f8fafc;
-    classDef success fill:#064e3b,stroke:#34d399,stroke-width:1.5px,color:#f8fafc;
-    class REQ,IDEM primary;
-    class STEP1,STEP2,STEP3 accent;
-    class SG,HK,KAFKA,RECON success;
+    REQ["Merchant Request"] --> IDEM["Idempotency Filter"]
+    IDEM --> ORCH{"3-Step Orchestrator"}
+    ORCH -->|01| AUTH["Authorization"]
+    ORCH -->|02| THREE_DS["3DS Auth (FPS / Wallets)"]
+    ORCH -->|03| CAPTURE["Capture & Settlement"]
+    AUTH -.-> SG["🇸🇬 Singapore Stack"]
+    THREE_DS -.-> HK["🇭🇰 Hong Kong Stack"]
+    CAPTURE --> KAFKA[("Kafka Event Bus")]
+    KAFKA --> RECON[("Postgres Ledger")]
 ```
 
 ---
 
-### 2. Neural Audio & Adaptive Evaluation Pipeline (`AlgoMentor`)
-> *Real-time FAANG-style DSA mock interview platform orchestrating speech streaming, LLM question synthesis, and automated scoring.*
+### Technical Toolkit
 
-```mermaid
-sequenceDiagram
-    autonumber
-    actor Candidate as 🧑‍💻 Candidate
-    participant UI as 🖥️ Next.js Client
-    participant API as ⚡ FastAPI Gateway
-    participant STT as 🎙️ AssemblyAI / Whisper
-    participant LLM as 🧠 Groq (Llama-3.3-70B)
-    participant TTS as 🔊 AWS Polly Neural
-
-    Candidate->>UI: Speaks DSA solution / code walk-through
-    UI->>API: WebRTC / Audio Stream Chunking
-    API->>STT: Low-latency Audio Transcription
-    STT-->>API: Synthesized Transcript Stream
-    API->>LLM: Contextual Prompt (Code, Complexity, Communication)
-    LLM-->>API: Adaptive Feedback + Dynamic Follow-up Question
-    API->>TTS: Neural Voice Synthesis Stream
-    TTS-->>UI: Real-Time Audio Feedback Stream
-    UI-->>Candidate: Realistic Conversational Voice Playback
-```
+| Domain | Technologies |
+|---|---|
+| **Languages** | Python, TypeScript, JavaScript, Haskell, C/C++, SQL |
+| **Backend & Distributed** | FastAPI, Node.js, Express, PostgreSQL, Redis, Apache Kafka, Microservices, Webhooks |
+| **Frontend & Mobile** | Next.js (App Router), React, Tailwind CSS, Flutter, Dart |
+| **AI & Speech** | Groq (Llama-3.3), Gemini API, AssemblyAI, AWS Polly, Scikit-Learn |
+| **DevOps & Cloud** | Docker, Kubernetes, Linux, Git, GitHub Actions, GCP |
 
 ---
 
-## 📋 Production Audit & Impact Ledger
-
-An audited log of production initiatives, scale breakthroughs, and open-source systems:
-
-| Ledger ID | System / Domain | Operation & Focus | Status | Impact & Guarantees |
-|:---:|---|---|:---:|---|
-| `#JUS-SG01` | **Singapore Regional Stack** | Automated blueprint infrastructure codification | `🟢 PRODUCTION` | Slashed new market rollout from **6 weeks ➔ 15 days (-75%)** |
-| `#JUS-WL02` | **Native Wallet SDKs** | Shipped WeChatPay, Alipay & FPS intent checkout | `🟢 PRODUCTION` | Seamless native Android/iOS wallet payments across SG & HK |
-| `#JUS-OR03` | **3-Step Orchestration** | Decoupled Authorization, 3DS Authentication & Capture | `🟢 PRODUCTION` | Modular state machine lifecycle with 100% idempotency |
-| `#DEV-AM04` | **AlgoMentor** | Real-time AI mock interview platform with neural voice | `🚀 LIVE SYSTEM` | Sub-second voice synthesis & adaptive evaluation (`Groq` + `AWS`) |
-| `#DEV-MM05` | **Meeting Intelligence** | Automated audio transcription & action item extraction | `🚀 LIVE SYSTEM` | End-to-end meeting summaries using `Gemini API` & `FastAPI` |
-
----
-
-## 🛠️ Engineering Loadout & System Capabilities
-
-```
-┌─────────────────────────┬──────────────────────────────────────────────────────────────────┐
-│ DOMAIN                  │ TECHNOLOGIES & TOOLING RUNTIMES                                  │
-├─────────────────────────┼──────────────────────────────────────────────────────────────────┤
-│ ⚡ Payment & Core        │ Haskell (Pure FP) • Python 3.12 • TypeScript • C/C++ • SQL       │
-│ 🛰️ Distributed Fabric   │ Apache Kafka • Redis (Distributed Caching & Limiters) • Postgres │
-│ 🌐 Backend & Services   │ FastAPI (Async APIs) • Node.js • Microservices • Webhooks • REST │
-│ 🧠 AI & Speech Systems  │ Groq (Llama-3.3-70B) • Gemini API • AWS Polly • AssemblyAI       │
-│ 🖥️ Interface & Mobile   │ Next.js (App Router) • React 19 • Tailwind CSS • Flutter / Dart  │
-│ 🛡️ DevOps & Infra       │ Docker • Kubernetes • Linux Server Administration • Git • Actions│
-└─────────────────────────┴──────────────────────────────────────────────────────────────────┘
-```
+### Activity
 
 <div align="center">
-  <a href="#">
-    <img src="https://skillicons.dev/icons?i=py,ts,js,haskell,cpp,postgres,redis,kafka,docker,kubernetes,fastapi,nodejs,nextjs,react,tailwind,git,linux,postman,aws,gcp" alt="Tech Stack Icons" />
-  </a>
+  <img src="https://github-stats-extended.vercel.app/api?username=vjsujal&show_icons=true&theme=github_dark&hide_border=true&bg_color=00000000" alt="GitHub Stats" height="150" />
+  &nbsp;&nbsp;
+  <img src="https://github-stats-extended.vercel.app/api/top-langs?username=vjsujal&layout=compact&theme=github_dark&hide_border=true&bg_color=00000000" alt="Top Languages" height="150" />
+</div>
+
+<div align="center">
+  <img src="https://streak-stats.demolab.com/?user=vjsujal&theme=github-dark&hide_border=true&background=00000000" alt="GitHub Streak" />
 </div>
 
 ---
 
-## 📊 Telemetry, Activity & Contribution Stream
-
-<div align="center">
-  <table border="0" cellspacing="0" cellpadding="0">
-    <tr align="center">
-      <td>
-        <img width="420" src="https://github-stats-extended.vercel.app/api?username=vjsujal&show_icons=true&theme=tokyo-night&border_radius=10&rank_icon=github" alt="Sujal's GitHub Stats" />
-      </td>
-      <td>
-        <img width="420" src="https://github-stats-extended.vercel.app/api/top-langs?username=vjsujal&layout=compact&theme=tokyo-night&border_radius=10" alt="Top Languages" />
-      </td>
-    </tr>
-    <tr align="center">
-      <td colspan="2">
-        <br/>
-        <img width="850" src="https://streak-stats.demolab.com/?user=vjsujal&theme=tokyo-night&border_radius=10" alt="GitHub Streak" />
-      </td>
-    </tr>
-  </table>
-</div>
-
----
-
-## 📡 Dispatch & Communication Protocols
-
-```bash
-$ ping -c 1 sujalvijayvargiya
-PING sujal (12.9716° N, 77.5946° E [Bangalore, IN]): 56 data bytes
-64 bytes from juspay-hq: icmp_seq=0 ttl=64 time=0.042 ms
-
---- Communication Channels Available ---
-├── LinkedIn:  https://linkedin.com/in/sujalvijayvargiya
-├── Email:     sujalvj121@gmail.com
-├── Live App:  https://dsa-interviewer-bot.vercel.app
-└── GitHub:    https://github.com/vjsujal
-```
-
-<div align="center">
-  <sub>⚡ Engineered with precision &amp; architectural resilience by <b>Sujal Vijayvargiya</b></sub><br/>
-  <sub><i>"Simplicity is prerequisite for reliability." — Edsger W. Dijkstra</i></sub>
-</div>
+<p align="center">
+  <sub>Bangalore, India &nbsp;•&nbsp; <a href="mailto:sujalvj121@gmail.com">sujalvj121@gmail.com</a></sub>
+</p>
