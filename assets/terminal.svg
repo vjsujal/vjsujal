@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 280" width="100%" height="100%">
+  <defs>
+    <linearGradient id="termSurface" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0a0f1d" />
+      <stop offset="100%" stop-color="#060912" />
+    </linearGradient>
+  </defs>
+
+  <style>
+    .t-code {
+      font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
+      font-size: 13px;
+    }
+    @keyframes blinkCursor {
+      0%, 49% { opacity: 1; }
+      50%, 100% { opacity: 0; }
+    }
+    .cursor-box {
+      animation: blinkCursor 1s infinite;
+      fill: #60a5fa;
+    }
+  </style>
+
+  <!-- Terminal Window Shell -->
+  <rect width="900" height="280" rx="12" fill="url(#termSurface)" stroke="#1e293b" stroke-width="1.2" />
+
+  <!-- Window Header Bar -->
+  <rect width="900" height="38" rx="12" fill="#0f172a" fill-opacity="0.9" />
+  <rect y="26" width="900" height="12" fill="#0f172a" fill-opacity="0.9" />
+  <line x1="0" y1="38" x2="900" y2="38" stroke="#1e293b" stroke-width="1" />
+
+  <!-- Window Dots -->
+  <circle cx="24" cy="19" r="5" fill="#ef4444" opacity="0.85" />
+  <circle cx="42" cy="19" r="5" fill="#f59e0b" opacity="0.85" />
+  <circle cx="60" cy="19" r="5" fill="#10b981" opacity="0.85" />
+
+  <!-- Header Title -->
+  <text x="450" y="24" text-anchor="middle" fill="#64748b" class="t-code" font-size="11.5" font-weight="500">
+    sujal@juspay-node-01:~ (zsh)
+  </text>
+
+  <!-- Terminal Session Output -->
+  <g transform="translate(32, 68)">
+    <!-- Command 1 -->
+    <text x="0" y="0" class="t-code">
+      <tspan fill="#10b981">➜</tspan>
+      <tspan fill="#60a5fa"> ~</tspan>
+      <tspan fill="#f8fafc"> sujal --system-profile --verbose</tspan>
+    </text>
+
+    <!-- Output Lines -->
+    <text x="0" y="24" class="t-code" fill="#64748b">
+      [SYSTEM] Sujal Vijayvargiya // SDE-1 @ Juspay Technologies (Bangalore, IN)
+    </text>
+
+    <text x="0" y="46" class="t-code">
+      <tspan fill="#818cf8">▶ CORE RUNTIMES:</tspan>
+      <tspan fill="#e2e8f0"> Haskell (Pure FP) • Python 3.12 (FastAPI) • TypeScript (Full-Stack) • C++</tspan>
+    </text>
+
+    <text x="0" y="68" class="t-code">
+      <tspan fill="#60a5fa">▶ FINTECH FABRIC:</tspan>
+      <tspan fill="#e2e8f0"> Multi-Region Blueprint (SG/HK) • 3-Step Payment Orchestration • Kafka Streams</tspan>
+    </text>
+
+    <text x="0" y="90" class="t-code">
+      <tspan fill="#34d399">▶ NEURAL ENGINE:</tspan>
+      <tspan fill="#e2e8f0"> AlgoMentor (Groq Llama-3.3-70B + AWS Polly Voice) • Meeting Intel (Gemini API)</tspan>
+    </text>
+
+    <text x="0" y="112" class="t-code">
+      <tspan fill="#f59e0b">▶ GUARANTEES:</tspan>
+      <tspan fill="#e2e8f0"> Strict Idempotency • State Machine Reconciliations • Sub-50ms Critical Paths</tspan>
+    </text>
+
+    <text x="0" y="134" class="t-code" fill="#334155">
+      ────────────────────────────────────────────────────────────────────────────────────────
+    </text>
+
+    <!-- Command 2 Prompt + Blinking Cursor -->
+    <text x="0" y="160" class="t-code">
+      <tspan fill="#10b981">➜</tspan>
+      <tspan fill="#60a5fa"> ~</tspan>
+      <tspan fill="#f8fafc"> sujal --connect</tspan>
+      <tspan fill="#10b981"> [Status: Ready // sujalvj121@gmail.com]</tspan>
+    </text>
+
+    <!-- Next line with active blinking cursor -->
+    <text x="0" y="184" class="t-code">
+      <tspan fill="#10b981">➜</tspan>
+      <tspan fill="#60a5fa"> ~</tspan>
+      <tspan fill="#94a3b8"> </tspan>
+    </text>
+    <rect x="22" y="172" width="8" height="14" class="cursor-box" />
+  </g>
+</svg>

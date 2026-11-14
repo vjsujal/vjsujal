@@ -1,0 +1,192 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 360" width="100%" height="100%">
+  <defs>
+    <!-- Refined Dark Luxury Canvas Gradient -->
+    <linearGradient id="heroBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#090d16" />
+      <stop offset="50%" stop-color="#0d1322" />
+      <stop offset="100%" stop-color="#080b12" />
+    </linearGradient>
+
+    <!-- Metallic Typography Gradient -->
+    <linearGradient id="titleMetallic" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="60%" stop-color="#f1f5f9" />
+      <stop offset="100%" stop-color="#cbd5e1" />
+    </linearGradient>
+
+    <!-- Refined Accent Gradient (Precision Indigo to Sky) -->
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#60a5fa" />
+      <stop offset="100%" stop-color="#818cf8" />
+    </linearGradient>
+
+    <!-- Hairline Specular Border Gradient -->
+    <linearGradient id="borderSpecular" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3b82f6" stop-opacity="0.5" />
+      <stop offset="30%" stop-color="#1e293b" stop-opacity="0.8" />
+      <stop offset="70%" stop-color="#1e293b" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#6366f1" stop-opacity="0.4" />
+    </linearGradient>
+
+    <!-- Subtle Engineering Dot Matrix Grid -->
+    <pattern id="engGrid" width="28" height="28" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1" fill="#334155" fill-opacity="0.35" />
+    </pattern>
+
+    <!-- Refined Specular Glow Filter (Crisp, not blurry/muddy) -->
+    <filter id="softSpecular" x="-10%" y="-10%" width="120%" height="120%">
+      <feGaussianBlur stdDeviation="2.5" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <radialGradient id="ambientOrb" cx="80%" cy="20%" r="50%">
+      <stop offset="0%" stop-color="#1e3a8a" stop-opacity="0.18" />
+      <stop offset="100%" stop-color="#000000" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+
+  <style>
+    @keyframes pulseLed {
+      0%, 100% { opacity: 0.95; transform: scale(1); }
+      50% { opacity: 0.35; transform: scale(0.9); }
+    }
+    @keyframes traceBorder {
+      0% { stroke-dashoffset: 0; }
+      100% { stroke-dashoffset: 2520; }
+    }
+    .led-pulse {
+      animation: pulseLed 2.6s ease-in-out infinite;
+      transform-origin: center;
+    }
+    .mono {
+      font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Monaco, Consolas, monospace;
+    }
+    .sans {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    }
+  </style>
+
+  <!-- Base Shell -->
+  <rect width="900" height="360" rx="14" fill="url(#heroBg)" />
+  <rect width="900" height="360" rx="14" fill="url(#engGrid)" />
+  <rect width="900" height="360" rx="14" fill="url(#ambientOrb)" />
+
+  <!-- Outer Hairline Border with Traveling Specular Beam -->
+  <rect x="1.5" y="1.5" width="897" height="357" rx="13" fill="none" stroke="url(#borderSpecular)" stroke-width="1.2" />
+  <rect x="1.5" y="1.5" width="897" height="357" rx="13" fill="none" stroke="#60a5fa" stroke-width="1.8" stroke-dasharray="100 800" style="animation: traceBorder 12s linear infinite;" filter="url(#softSpecular)" opacity="0.85" />
+
+  <!-- Top System Bar -->
+  <rect x="2" y="2" width="896" height="42" rx="13" fill="#0f172a" fill-opacity="0.75" />
+  <line x1="2" y1="44" x2="898" y2="44" stroke="#1e293b" stroke-width="1" />
+
+  <!-- macOS Window Controls (Clean, Refined Matte) -->
+  <circle cx="26" cy="23" r="5" fill="#ef4444" opacity="0.85" />
+  <circle cx="44" cy="23" r="5" fill="#f59e0b" opacity="0.85" />
+  <circle cx="62" cy="23" r="5" fill="#10b981" opacity="0.85" />
+
+  <!-- Path Breadcrumb -->
+  <text x="86" y="27" fill="#64748b" class="mono" font-size="11.5" font-weight="500">
+    <tspan fill="#3b82f6">juspay-blr-01</tspan>
+    <tspan fill="#334155"> / </tspan>
+    <tspan fill="#94a3b8">payments-engine</tspan>
+    <tspan fill="#334155"> / </tspan>
+    <tspan fill="#cbd5e1">sujal-vijayvargiya.env</tspan>
+  </text>
+
+  <!-- Live Status Badge (Top Right) -->
+  <g transform="translate(712, 12)">
+    <rect width="162" height="24" rx="12" fill="#064e3b" fill-opacity="0.4" stroke="#059669" stroke-width="1" stroke-opacity="0.6" />
+    <circle cx="14" cy="12" r="4" fill="#10b981" class="led-pulse" filter="url(#softSpecular)" />
+    <text x="26" y="16" fill="#34d399" class="mono" font-size="10.5" font-weight="600" letter-spacing="0.8">SYSTEM NOMINAL</text>
+  </g>
+
+  <!-- Main Hero Content -->
+  <!-- Context Lead -->
+  <g transform="translate(48, 92)">
+    <text x="0" y="0" fill="#60a5fa" class="mono" font-size="12.5" font-weight="600" letter-spacing="1.2">
+      // SOFTWARE DEVELOPMENT ENGINEER
+    </text>
+  </g>
+
+  <!-- Main Identity Name -->
+  <g transform="translate(48, 145)">
+    <text x="0" y="0" fill="url(#titleMetallic)" class="sans" font-size="44" font-weight="700" letter-spacing="-0.8">
+      Sujal Vijayvargiya
+    </text>
+  </g>
+
+  <!-- Role Subtitle -->
+  <g transform="translate(48, 185)">
+    <text x="0" y="0" fill="#94a3b8" class="sans" font-size="18" font-weight="400">
+      SDE-1 at <tspan fill="#ffffff" font-weight="600">Juspay Technologies</tspan>
+      <tspan fill="#475569"> — </tspan>
+      <tspan fill="#cbd5e1">Fintech Infrastructure &amp; AI Systems</tspan>
+    </text>
+  </g>
+
+  <!-- Mission Statement Tagline -->
+  <g transform="translate(48, 218)">
+    <text x="0" y="0" fill="#64748b" class="sans" font-size="13.5">
+      Building high-throughput payment architectures, multi-region stacks &amp; conversational AI workflows.
+    </text>
+  </g>
+
+  <!-- Spec / Pillar Badges (Refined Dark Slate Containers) -->
+  <g transform="translate(48, 252)">
+    <!-- Pill 1: Payment Orchestration -->
+    <rect x="0" y="0" width="180" height="30" rx="6" fill="#0f172a" stroke="#2563eb" stroke-width="1" stroke-opacity="0.4" />
+    <text x="90" y="19" text-anchor="middle" fill="#93c5fd" class="mono" font-size="10.5" font-weight="600" letter-spacing="0.5">
+      ⚡ PAYMENT ORCHESTRATION
+    </text>
+
+    <!-- Pill 2: Distributed FP -->
+    <rect x="192" y="0" width="168" height="30" rx="6" fill="#0f172a" stroke="#4f46e5" stroke-width="1" stroke-opacity="0.4" />
+    <text x="276" y="19" text-anchor="middle" fill="#c7d2fe" class="mono" font-size="10.5" font-weight="600" letter-spacing="0.5">
+      λ HASKELL &amp; FASTAPI
+    </text>
+
+    <!-- Pill 3: AI Platforms -->
+    <rect x="372" y="0" width="160" height="30" rx="6" fill="#0f172a" stroke="#0284c7" stroke-width="1" stroke-opacity="0.4" />
+    <text x="452" y="19" text-anchor="middle" fill="#7dd3fc" class="mono" font-size="10.5" font-weight="600" letter-spacing="0.5">
+      🤖 VOICE &amp; LLM AGENTS
+    </text>
+
+    <!-- Pill 4: Regional Stacks -->
+    <rect x="544" y="0" width="154" height="30" rx="6" fill="#0f172a" stroke="#059669" stroke-width="1" stroke-opacity="0.4" />
+    <text x="621" y="19" text-anchor="middle" fill="#6ee7b7" class="mono" font-size="10.5" font-weight="600" letter-spacing="0.5">
+      🌐 MULTI-REGION SG/HK
+    </text>
+  </g>
+
+  <!-- Subtle Architectural Traces (Refined Slate Blueprint Aesthetic) -->
+  <g transform="translate(560, 105)">
+    <!-- Circuit lines -->
+    <path d="M 30 35 H 110 L 150 75 H 260" fill="none" stroke="#223049" stroke-width="1.2" />
+    <circle cx="30" cy="35" r="3" fill="#60a5fa" />
+    <circle cx="150" cy="75" r="3" fill="#818cf8" />
+    <circle cx="260" cy="75" r="3.5" fill="#10b981" />
+
+    <path d="M 80 5 H 170 L 210 45 H 280" fill="none" stroke="#1e293b" stroke-width="1" />
+    <circle cx="80" cy="5" r="2.5" fill="#94a3b8" />
+    <circle cx="280" cy="45" r="2.5" fill="#60a5fa" />
+
+    <!-- Telemetry Metric Badge -->
+    <rect x="130" y="96" width="170" height="48" rx="8" fill="#0b1324" stroke="#1e293b" stroke-width="1" />
+    <text x="144" y="116" fill="#64748b" class="mono" font-size="9.5" font-weight="600" letter-spacing="0.8">IDEMPOTENT GUARANTEE</text>
+    <text x="144" y="133" fill="#f8fafc" class="mono" font-size="13" font-weight="700">99.999% SLA // ACID</text>
+  </g>
+
+  <!-- Bottom Coordinates Bar -->
+  <g transform="translate(0, 318)">
+    <line x1="48" y1="14" x2="852" y2="14" stroke="#1e293b" stroke-width="1" />
+    <text x="48" y="28" fill="#475569" class="mono" font-size="10" letter-spacing="0.5">
+      LOCATION: 12.9716° N, 77.5946° E [BANGALORE, IN]
+    </text>
+    <text x="852" y="28" text-anchor="end" fill="#475569" class="mono" font-size="10" letter-spacing="0.5">
+      DEPLOYMENT ARCHITECTURE // JUSPAY TECH
+    </text>
+  </g>
+</svg>
