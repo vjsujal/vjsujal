@@ -135,13 +135,13 @@ sequenceDiagram
 <div align="center">
   <table border="0" cellspacing="0" cellpadding="0">
     <tr align="center">
-      <td>
-        <img width="420" src="https://github-stats-extended.vercel.app/api?username=vjsujal&show_icons=true&theme=github_dark&hide_border=true&bg_color=00000000" alt="Sujal's GitHub Stats" />
-      </td>
+      <!-- <td> -->
+        <!-- <img width="420" src="https://github-stats-extended.vercel.app/api?username=vjsujal&show_icons=true&theme=github_dark&hide_border=true&bg_color=00000000" alt="Sujal's GitHub Stats" /> -->
+      <!-- </td>
       <td>
         <img width="420" src="https://github-stats-extended.vercel.app/api/top-langs?username=vjsujal&layout=compact&theme=github_dark&hide_border=true&bg_color=00000000" alt="Top Languages" />
       </td>
-    </tr>
+    </tr> -->
     <tr align="center">
       <td colspan="2">
         <br/>
